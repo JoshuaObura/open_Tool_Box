@@ -3,6 +3,7 @@
       @tool = Tool.new
       @tools = Tool.all
     end
+    
     def new
       @tool = Tool.new
     end
@@ -40,8 +41,8 @@
         render :edit
       end
     end
+    private
+    def tool_params
+      params.require(:tool).permit(:name, :category, :location, :description, :user_id, :photo)
+    end
   end
-  private
-  def tool_params
-    params.require(:tool).permit(:name, :category, :location, :description, :user_id, :photo)
-end
