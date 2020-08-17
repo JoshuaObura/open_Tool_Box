@@ -1,4 +1,3 @@
-class ToolsController < ApplicationController
   class ToolsController < ApplicationController
     def index
       @tool = Tool.new
