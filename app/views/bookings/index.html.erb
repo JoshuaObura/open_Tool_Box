@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Your bookings</h2>
+
+  <ul>
+    <% @bookings.each do |booking| %>
+      <li><%= booking.tool.name %> -- <%= booking.start_date %> || <%= booking.end_date %></li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Back to all tools", tools_path %>
+</div>
