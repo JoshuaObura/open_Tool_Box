@@ -1,6 +1,5 @@
 class ToolsController < ApplicationController
   def index
-    @tool = Tool.new
     @tools = Tool.all
   end
 
@@ -9,7 +8,7 @@ class ToolsController < ApplicationController
   end
   def create
     @tool = Tool.new(tool_params)
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id]) #current usrt ftom device
     @tool.user = @user
 
     if @tool.save

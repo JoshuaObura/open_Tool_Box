@@ -25,6 +25,7 @@ puts "Destroy tools list"
 Tool.destroy_all
 
 puts "Create tools list"
+
 sander = Tool.new(user: user_2, name: "Sander", description: "Great tool to smooth surfaces, only used a couple of times, in good condition", category: "Home Improvement")
 sander.save!
 polisher = Tool.new(user: user_2, name: "Polisher", description: "Portable-sized polishing tool, comes with case", category: "Home Improvement")
@@ -60,3 +61,4 @@ pressure_washer = Tool.new(user: user_5, name: "Pressure Washer", description: "
 pressure_washer.save!
 power_vacuum = Tool.new(user: user_5, name: "Power Vacuum", description: "Very powerful tool to clean tough carpets across wide areas", category: "Cleaning")
 power_vacuum.save!
+
