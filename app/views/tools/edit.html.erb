@@ -1,0 +1,7 @@
+<h1>Edit Tool Info</h1>
+<% simple_form_for(@tool) do |f| %>
+<%= f.associatation :name %>
+<%= f.input :description %>
+<button type="button" class="btn btn-dark"><%= submit %></button>
+<% end %>
+<p><%= link_to ('<i class="fas fa-home"></i>').html_safe, tools_path%><p>
