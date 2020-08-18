@@ -7,16 +7,16 @@ class ToolsController < ApplicationController
   def new
     @tool = Tool.new
   end
-
   def create
     @tool = Tool.new(tool_params)
     @user = User.find(params[:user_id])
     @tool.user = @user
-      if @tool.save
-        redirect_to_tools_user_path(@user)
-      else
-        render :new
-      end
+
+    if @tool.save
+      redirect_to_tools_user_path(@user)
+    else
+      render :new
+    end
   end
 
   def show
