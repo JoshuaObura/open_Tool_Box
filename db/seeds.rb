@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Destroy tools list"
+Tool.destroy_all
+
+puts "Create tools list"
+wrench = Tool.new(name: "Wrench", description: "Provides grip and mechanical advantage in applying torque to turn objects")
+hammer = Tool.new(name: "Hammer", description: "Weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object")
+ladder = Tool.new(name: "Ladder", description: "Repeated bars or steps between two upright lengths of metal ro wood used for climbing up or down something")
+saw = Tool.new(name: "Saw", description: "A tough blade, wire, or chain with a hard toothed edge used to cut through material")
