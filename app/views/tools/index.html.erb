@@ -1,0 +1,43 @@
+<div class ="container justify-content-start p-2">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+    <h1>Tools For Hire</h1>
+      <%= simple_form_for Tool.new, method: :get do |f| %>
+      <%= f.input :name, :label => false, wrapper_html: {class: "form-inline"} do %>
+      <%= f.input_field :name, collection: @rollout_options, :label => false %>
+      <%= f.button :submit, "Search", :class => "btn btn-primary" %>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="https://www.balloohire.com/images/sized/images/uploads/product/8kg_Chipping_Hammer-400x400.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Home Improvement</h5>
+      <p class="card-text">From Drills to Ladders. Everything you'll need to get the job done.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://www.salisburygardenmachinery.co.uk/media/com_eshop/products/resized/119813-51_004-300x300.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Gardening</h5>
+      <p class="card-text">Grass getting too long? Lawnmowers and hedgetrimmers here.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/qn16wpMlYP84Qs9D7qhWYxhvdJxfCe783vL7_aZj3gZNt2VJHiDr5T80l8N_JHhorPLnvt6INVSD9eygTXTkp-dEV9UyiRFKTiPE5YgdiBNFaePw7jNHR0Yt8Wi-2E3Uvy-CGX3tzw9w" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Automotive</h5>
+      <p class="card-text">Dead battery or flat tyre? Get your Jacks and Jumpers.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="https://www.lakeside-hire.co.uk/wp-content/uploads/2019/10/carpet-cleaner-hire-484.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Cleaning</h5>
+      <p class="card-text">All your cleaning equipment here! no mess too big.</p>
+    </div>
+  </div>
+</div>
