@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_121540) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "description"
-    t.string "category"
     t.bigint "user_id", null: false
+    t.string "category"
     t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
