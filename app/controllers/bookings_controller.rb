@@ -13,11 +13,12 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @now = Date.today
     @booking = Booking.new(booking_params)
     @booking.tool = Tool.find(params[:tool_id])
     @booking.user = current_user
-    if @booking.save
-      redirect_to user_path(current_user)
+    if @booking.start_date >= @now && @booking.start_date <= @booking.end_date && @booking.save
+      redirect_to dashboard_path
     else
       render :new
     end
