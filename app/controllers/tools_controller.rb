@@ -8,18 +8,18 @@ class ToolsController < ApplicationController
 
   def new
     @tool = Tool.new
+    @category = ["Home Improvement", "Gardening", "Automotive", "Cleaning"]
   end
 
 
 
   def create
     @tool = Tool.new(tool_params)
-    @user = User.find(params[:user_id]) #current usrt ftom device
-    @tool.user = @user
+    @tool.user = current_user
 
 
     if @tool.save
-      redirect_to_tools_user_path(@user)
+      redirect_to tools_path(@user)
     else
       render :new
     end
@@ -35,7 +35,7 @@ class ToolsController < ApplicationController
       if current_user.id == tool.user_id
         @tool = tool
       else
-        redirect_to_tools_user_path(current_user)
+        redirect_to tools_path(current_user)
       end
 
   end
