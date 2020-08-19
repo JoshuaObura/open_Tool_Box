@@ -1,5 +1,5 @@
 
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<div class="col-12">
   <h1>A Tool For Any Situation</h1>
   <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
     <div class="search-form-control form-group">
@@ -7,17 +7,20 @@
       <button name="button" type="submit" class="btn btn-flat">
       <i class="fas fa-search"></i> Search
       </button>
-      <button> <%= link_to "List a Tool", 'tools/new' %>
+      <button class= "btn btn-primary" > <%= link_to "List a Tool", 'tools/new' %>
       </button>
     </div>
   </form>
-      <div class="card-container">
-        <div class="row">
-          <% @tools.each do |tool| %>
-          <%= link_to tool_path(tool) do %>
-           <img src="https://www.askideas.com/media/73/Hey-You-Finger-Picture.gif">
-            <% end %>
-          <% end %>
-        </div>
+  
+  <div class="card-container ">
+    <% @tools.each do |tool| %>
+      <div class="card">
+        <%= link_to tool_path(tool) do %>
+          <div class="size mb-4"> <img src="https://www.askideas.com/media/73/Hey-You-Finger-Picture.gif">
+            <span> <%= tool.name.capitalize %> </span>
+          </div>
+        <% end %>
       </div>
+    <% end %>
+  </div>
 </div>
