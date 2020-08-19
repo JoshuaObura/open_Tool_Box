@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  width: 50%;
+  left: 15%;
+  top: 20px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.card {
+  min-height: 50vh;
+  height: 200px;
+  color: black;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: contain !important;
+  background-repeat: repeat;
+  background-position: center;
+  margin: 25px 25px;
+  position: relative;
+  top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.10);
+}
+
+.btn-tool {
+  border-radius: 5px;
+  padding: 5px 5px;
+  width: 120px;
+  position: relative;
+  left: 100px;
+}
+
+h1 {
+  text-align: center;
+}
