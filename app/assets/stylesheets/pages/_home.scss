@@ -1,23 +1,27 @@
+@import "/components/card";
+
 .btn-primary {
   color: #fff;
-  background-color: #64a19d;
-  border-color: #64a19d;
+  background-color: #E6B831;
+  border-color: #E6B831;
   border-radius: 5px;
 
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #548b87;
-  border-color: #4f837f;
+  background-color: black;
+  border-color: black;
 }
 
-
+.linear-gradient-background {
+  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
+}
 
 .toolbox {
   width: 100%;
   height: auto;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
 }
 .toolbox h1 {
   width: 90%;
@@ -35,31 +39,3 @@
   margin-right: auto;
   margin-left: auto;
 }
-
-.card-img-top {
-  width: 100%;
-  height: 20vw;
-  object-fit: cover;
-}
-.card {
-min-height: 50vh;
-height: 400px;
-color: black;
-text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-background-size: contain !important;
-background-repeat: no-repeat;
-background-position: center;
-margin: 10px 0px;
-position: relative;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-border-radius: 5px 5px 0 0;
-}
-.card:hover {
-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-
-
-
-
