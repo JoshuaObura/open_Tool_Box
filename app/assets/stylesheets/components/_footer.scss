@@ -1,6 +1,7 @@
 .footer {
   bottom: 0;
-  position: bottom;
+  position: static;
+  bottom: 0;
   background: black;
   display: flex;
   justify-content: space-between;
