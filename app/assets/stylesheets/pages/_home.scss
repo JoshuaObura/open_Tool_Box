@@ -13,15 +13,10 @@
   border-color: black;
 }
 
-.linear-gradient-background {
-  background-repeat: no-repeat;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
-}
-
 .toolbox {
   width: 100%;
   height: auto;
-  padding: 15rem 0;
+  padding: 6rem 0;
 }
 .toolbox h1 {
   width: 90%;
@@ -38,4 +33,9 @@
   font-size: 1rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.grad-bg {
+  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
 }
