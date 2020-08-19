@@ -1,40 +1,39 @@
+<div class="container">
+  <div class="header m-3 pb-2">
+    <h1>Tool Hire</h1>
+  </div>
 
-
-<div class="col-12">
-<h1>Tool Hire</h1>
   <div class="show-container">
     <div class="card-tool">
       <img height="300" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
 
-        <div class="card-tool-info">
-          <h2><%= @tool.name %></h2>
-          <p><%= @tool.description %></p>
-          <p><%= @tool.category %> </p>
-        </div>
-
-        <h2 class="card-tool-price">£££</h2>
-    </div>
-
-      <div class="card-tool-icons">
-        <p>
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#icons" aria-expanded="false" aria-controls="collapseExample">
-          More Info
-          </button>
-        </p>
-
-          <div class="collapse" id="icons">
-            <div class="card card-body">
-              <i class="fas fa-battery-full"></i>
-            </div>
-
-          </div>
-        </div>
-
-        <button type="button" class="btn btn-outline-warning"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
+      <div class="card-tool-info">
+        <h2><%= @tool.name %></h2>
+        <p><%= @tool.description %></p>
+        <p><%= @tool.category %> </p>
       </div>
 
+      <h2 class="card-tool-price">£££</h2>
     </div>
 
+    <div class="card-tool-icons">
+      <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#icons" aria-expanded="false" aria-controls="collapseExample">
+        More Info
+        </button>
+      </p>
+
+      <div class="collapse" id="icons">
+        <div class="card card-body">
+          <i class="fas fa-battery-full"></i>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-outline-warning"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
+  </div>
+
+  <div class="links">
     <p><%= link_to ('<i class="fas fa-arrow-circle-left"></i>').html_safe, tools_path %></p>
     <p><%= link_to edit_tool_path(@tool) do  %>
       <i class="fas fa-edit"></i>

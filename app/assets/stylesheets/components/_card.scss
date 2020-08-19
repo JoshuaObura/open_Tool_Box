@@ -60,13 +60,13 @@ h1 {
 }
 
 .card-tool{
-  align-items:center;
   background-color: white;
   overflow: hidden;
   box-shadow: 0 0 15px, rgba(0,0,0,0.2);
   object-fit:cover;
   border-radius: 5px;
   max-width: 500px;
+  margin: 16px 0;
 }
 
 .card-tool-info{
