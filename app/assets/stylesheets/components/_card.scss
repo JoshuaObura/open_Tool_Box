@@ -35,3 +35,12 @@
 h1 {
   text-align: center;
 }
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .size{
+    height: 200px;
+    width: 200px;
+  }
+}
