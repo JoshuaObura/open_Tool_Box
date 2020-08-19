@@ -1,11 +1,17 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <h1> List a Tool </h1>
 <%= simple_form_for(@tool) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
-  <%= f.text_field :descrption %>
+  <%= f.text_field :description %>
   <br>
-  <%= f.assosiation :category%>
+  <%= f.input :category, as: :select, collection: @category, prompt: 'Select category', label: false %>
   <%= f.submit %>
   <% end %>
 
