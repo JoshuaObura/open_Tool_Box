@@ -1,9 +1,19 @@
-<h2>My Tools</h2>
+<div class="container tools">
+  <h2>My Tools</h2>
 
-<% current_user.tools.each do |tool| %>
-<% end %>
+  <ul>
+    <% current_user.tools.each do |tool| %>
+      <li><%= tool.name %></li>
+    <% end %>
+  </ul>
+</div>
 
-<h2>My Bookings</h2>
+<div class="container bookings">
+  <h2>My Bookings</h2>
 
-<% current_user.bookings.each do |booking| %>
-<% end %>
+  <ul>
+    <% current_user.bookings.each do |booking| %>
+      <li><%= booking.tool.name %> -- <%= booking.start_date %> || <%= booking.end_date %></li>
+    <% end %>
+  </ul>
+</div>
