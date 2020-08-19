@@ -1,6 +1,8 @@
 class ToolsController < ApplicationController
+
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
   def index
-    @tool = Tool.new
+
     @tools = Tool.all
   end
 
@@ -8,10 +10,14 @@ class ToolsController < ApplicationController
     @tool = Tool.new
   end
 
+
+
   def create
     @tool = Tool.new(tool_params)
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id]) #current usrt ftom device
     @tool.user = @user
+
+
     if @tool.save
       redirect_to_tools_user_path(@user)
     else
@@ -25,11 +31,13 @@ class ToolsController < ApplicationController
 
   def edit
     tool = Tool.find(params[:id])
-    if current_user.id == tool.user_id
-      @tool = tool
-    else
-      redirect_to_tools_user_path(current_user)
-    end
+
+      if current_user.id == tool.user_id
+        @tool = tool
+      else
+        redirect_to_tools_user_path(current_user)
+      end
+
   end
 
   def destroy
@@ -41,6 +49,7 @@ class ToolsController < ApplicationController
   def update
     @tool = Tool.find
     @user = User.find(params[:user_id])
+
     if @tool.update(tool_params)
       redirect_to_tools_user_path(@user)
     else
@@ -49,6 +58,7 @@ class ToolsController < ApplicationController
   end
 
   private
+
 
   def tool_params
     params.require(:tool).permit(:name, :category, :location, :description, :user_id, :photo)

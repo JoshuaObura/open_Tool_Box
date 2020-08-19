@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def show
@@ -17,16 +17,16 @@ class BookingsController < ApplicationController
     @booking.tool = Tool.find(params[:tool_id])
     @booking.user = current_user
     if @booking.save
-        redirect_to booking_path(@booking)
+      redirect_to user_path(current_user)
     else
-        render :new
+      render :new
     end
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to booking_path(booking.tool)
+    redirect_to user_path(current_user)
   end
 
   private 
