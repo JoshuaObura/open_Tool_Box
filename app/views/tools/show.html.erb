@@ -1,16 +1,15 @@
 
-<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+<div class="col-12">
 <h1>Tool Hire</h1>
-  <div class="center">
+  <div class="show-container">
     <div class="card-tool">
-      <img src="" />
+      <img height="300" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
         <div class="card-tool-info">
           <h2><%= @tool.name %></h2>
-          <p><%= @tool.description %></p> 
+          <p><%= @tool.description %></p>
           <p><%= @tool.category %> </p>
         </div>
         <h2 class="card-tool-price">£££</h2>
-        <img src="" class="card-trip-user avatar-bordered" />
     </div>
       <div class="card-tool-icons">
         <p>
@@ -20,7 +19,7 @@
         </p>
           <div class="collapse" id="icons">
             <div class="card card-body">
-              some stuff
+              <i class="fas fa-battery-full"></i>
             </div>
           </div>
         <button type="button" class="btn btn-outline-warning"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
