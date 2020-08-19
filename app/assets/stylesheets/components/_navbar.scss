@@ -6,6 +6,7 @@
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,4 +15,8 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.other-pages {
+  background-color: black;
 }
