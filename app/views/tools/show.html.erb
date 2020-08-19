@@ -15,7 +15,7 @@
       <div class="card-tool-icons">
         <p>
           <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#icons" aria-expanded="false" aria-controls="collapseExample">
-            More Info
+           More Info
           </button>
         </p>
           <div class="collapse" id="icons">
@@ -23,8 +23,8 @@
               some stuff
             </div>
           </div>
+        <button><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
       </div>
-      <button>Make A Booking</button>
   </div>
  <p><%= link_to ('<i class="fas fa-arrow-circle-left"></i>').html_safe, tools_path %></p>
  <p><%= link_to edit_tool_path(@tool) do  %>
