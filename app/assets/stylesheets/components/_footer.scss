@@ -1,13 +1,12 @@
 .footer {
   bottom: 0;
-  position: static;
-  bottom: 0;
-  background: black;
+  position: absolute;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   height: 100px;
   width: 100%;
-  padding: 0px 50px;
+  padding: 0px 0px;
 }
 .footer-links {
   display: flex;

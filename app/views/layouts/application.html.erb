@@ -16,8 +16,10 @@
   </head>
 
   <body>
-    <%= yield %>
-    <%= render 'shared/footer' %>
-    <%= javascript_pack_tag 'map' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'shared/footer' %>
+      <%= javascript_pack_tag 'map' %>
+    </div>
   </body>
 </html>
