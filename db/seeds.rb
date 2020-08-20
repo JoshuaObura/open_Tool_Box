@@ -26,39 +26,39 @@ Tool.destroy_all
 
 puts "Create tools list"
 
-sander = Tool.new(user: user_2, name: "Sander", description: "Great tool to smooth surfaces, only used a couple of times, in good condition", category: "Home Improvement")
+sander = Tool.new(user: user_2, name: "Sander", description: "Great tool to smooth surfaces, only used a couple of times, in good condition", category: "Home Improvement", address: "25 Bellew Street, London")
 sander.save!
-polisher = Tool.new(user: user_2, name: "Polisher", description: "Portable-sized polishing tool, comes with case", category: "Home Improvement")
+polisher = Tool.new(user: user_2, name: "Polisher", description: "Portable-sized polishing tool, comes with case", category: "Home Improvement", address: "25 Bellew Street, London")
 polisher.save!
-sds_drill = Tool.new(user: user_2, name: "SDS Drill", description: "Powerful drill, much more effective and efficient than a hammer drill", category: "Home Improvement")
+sds_drill = Tool.new(user: user_2, name: "SDS Drill", description: "Powerful drill, much more effective and efficient than a hammer drill", category: "Home Improvement", address: "25 Bellew Street, London")
 sds_drill.save!
-pressure_washer = Tool.new(user: user_2, name: "Pressure Washer", description: "Washes at pressures up to 30,00 PSI, only used once", category: "Home Improvement")
+pressure_washer = Tool.new(user: user_2, name: "Pressure Washer", description: "Washes at pressures up to 30,00 PSI, only used once", category: "Home Improvement", address: "25 Bellew Street, London")
 pressure_washer.save!
 
-jumper_cables = Tool.new(user: user_3, name: "Jumper Cables", description: "Renting out my old jumper cables, 5m long", category: "Automotive")
+jumper_cables = Tool.new(user: user_3, name: "Jumper Cables", description: "Renting out my old jumper cables, 5m long", category: "Automotive", address: "25 Bellew Street, London")
 jumper_cables.save!
-trolley_jack = Tool.new(user: user_3, name: "Trolley Jack", description: "Mounted on wheels and can be pulled to wherever it is needed", category: "Automotive")
+trolley_jack = Tool.new(user: user_3, name: "Trolley Jack", description: "Mounted on wheels and can be pulled to wherever it is needed", category: "Automotive", address: "25 Bellew Street, London")
 trolley_jack.save!
-socket_set = Tool.new(user: user_3, name: "Socket Set", description: "119 piece socket-set, one piece is missing", category: "Automotive")
+socket_set = Tool.new(user: user_3, name: "Socket Set", description: "119 piece socket-set, one piece is missing", category: "Automotive", address: "25 Bellew Street, London")
 socket_set.save!
-air_compressor = Tool.new(user: user_3, name: "Air Compressor", description: "Portable air compressor, very powerful", category: "Automotive")
+air_compressor = Tool.new(user: user_3, name: "Air Compressor", description: "Portable air compressor, very powerful", category: "Automotive", address: "25 Bellew Street, London")
 air_compressor.save!
 
-lawn_mower = Tool.new(user: user_4, name: "Lawn Mower", description: "Electrical rotary lawn mower, very energy-efficient", category: "Gardening")
+lawn_mower = Tool.new(user: user_4, name: "Lawn Mower", description: "Electrical rotary lawn mower, very energy-efficient", category: "Gardening", address: "25 Bellew Street, London")
 lawn_mower.save!
-hedge_trimmer = Tool.new(user: user_4, name: "Hedge Trimmer", description: "Ideal for users conscious of noise as its not very loud", category: "Gardening")
+hedge_trimmer = Tool.new(user: user_4, name: "Hedge Trimmer", description: "Ideal for users conscious of noise as its not very loud", category: "Gardening", address: "25 Bellew Street, London")
 hedge_trimmer.save!
-leaf_blower = Tool.new(user: user_4, name: "Leaf Blower", description: "Powerful leaf blower, effective over large areas", category: "Gardening")
+leaf_blower = Tool.new(user: user_4, name: "Leaf Blower", description: "Powerful leaf blower, effective over large areas", category: "Gardening", address: "25 Bellew Street, London")
 leaf_blower.save!
-log_saw = Tool.new(user: user_4, name: "Log Saw", description: "Great for cutting logs for firewood", category: "Gardening")
+log_saw = Tool.new(user: user_4, name: "Log Saw", description: "Great for cutting logs for firewood", category: "Gardening", address: "25 Bellew Street, London")
 log_saw.save!
 
-floor_scrubber = Tool.new(user: user_5, name: "Floor Scrubber", description: "Very easy to use, just plug in and polish floors!", category: "Cleaning")
+floor_scrubber = Tool.new(user: user_5, name: "Floor Scrubber", description: "Very easy to use, just plug in and polish floors!", category: "Cleaning", address: "25 Bellew Street, London")
 floor_scrubber.save!
-gutter_pipe_cleaning_set = Tool.new(user: user_5, name: "Gutter Pipe Cleaning Set", description: "Great for hard-to-reach areas", category: "Cleaning")
+gutter_pipe_cleaning_set = Tool.new(user: user_5, name: "Gutter Pipe Cleaning Set", description: "Great for hard-to-reach areas", category: "Cleaning", address: "25 Bellew Street, London")
 gutter_pipe_cleaning_set.save!
-pressure_washer = Tool.new(user: user_5, name: "Pressure Washer", description: "Can be used to clean partios, cars, wheelies bins, etc.", category: "Cleaning")
+pressure_washer = Tool.new(user: user_5, name: "Pressure Washer", description: "Can be used to clean partios, cars, wheelies bins, etc.", category: "Cleaning", address: "25 Bellew Street, London")
 pressure_washer.save!
-power_vacuum = Tool.new(user: user_5, name: "Power Vacuum", description: "Very powerful tool to clean tough carpets across wide areas", category: "Cleaning")
+power_vacuum = Tool.new(user: user_5, name: "Power Vacuum", description: "Very powerful tool to clean tough carpets across wide areas", category: "Cleaning", address: "25 Bellew Street, London")
 power_vacuum.save!
 

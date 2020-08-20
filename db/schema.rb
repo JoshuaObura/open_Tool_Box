@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 2020_08_20_095243) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "description"
+    t.bigint "user_id", null: false
     t.string "category"
     t.float "latitude"
     t.float "longitude"
     t.string "address"
-    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_tools_on_user_id"
   end
 
