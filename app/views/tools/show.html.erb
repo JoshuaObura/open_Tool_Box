@@ -5,13 +5,16 @@
 
   <div class="show-container">
     <div class="card-tool">
-      <img height="300" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
-
-      <div class="card-tool-info">
-        <h2><%= @tool.name %></h2>
-        <p><%= @tool.description %></p>
-        <p><%= @tool.category %> </p>
-      </div>
+      <% if @tool.photo.present? %>
+        <%= cl_image_tag @tool.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <div class="size mb-4"> <img src="https://www.askideas.com/media/73/Hey-You-Finger-Picture.gif">
+      <% end %>
+        <div class="card-tool-info">
+          <h2><%= @tool.name %></h2>
+          <p><%= @tool.description %></p>
+          <p><%= @tool.category %> </p>
+        </div>
 
       <h2 class="card-tool-price">£££</h2>
     </div>
