@@ -6,11 +6,13 @@
   border-color: #E6B831;
   border-radius: 5px;
 
+
 }
 .btn-primary:hover {
   color: #fff;
   background-color: black;
   border-color: black;
+  box-shadow: 0 8px 16px 0 #E6B831;
 }
 
 .toolbox {
@@ -21,6 +23,7 @@
 .toolbox h1 {
   width: 90%;
   font-size: 2.5rem;
+  font-weight: bold;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
@@ -46,16 +49,4 @@
   padding: 0px;
   max-width: 100%;
   position: relative;
-}
-
-.carousel-caption {
-  top: 50%;
-  transform: translateY(-50%);
-  bottom: initial;
-}
-
-.carousel-caption h5 {
-  -webkit-text-stroke: 1px black;
-  -webkit-text-fill-color: white;
-  font-size: 6rem;
 }
