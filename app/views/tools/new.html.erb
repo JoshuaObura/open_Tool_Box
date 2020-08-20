@@ -1,3 +1,4 @@
+<%= render 'shared/homenavbar' %>
 <div class="form">
   <h2> List a Tool </h2>
   <%= simple_form_for(@tool) do |f| %>
@@ -7,6 +8,7 @@
     <%= f.text_field :description %>
     <%= f.input :photo, as: :file %>
     <br>
+    <%= f.input :address %>
     <%= f.input :category, as: :select, collection: @category, prompt: 'Select category', label: false %>
     <%= f.submit class: "btn-primary" %>
   <% end %>
