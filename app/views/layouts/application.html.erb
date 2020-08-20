@@ -3,8 +3,6 @@
   <head>
     <title>OpenToolBox</title>
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="assets/stylesheets/pages/_home.scss" rel="stylesheet" />
-    <link href="assets"
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔨</text></svg>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,14 +11,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-    <%= stylesheet_pack_tag "map" %>
   </head>
 
   <body>
     <div class="container">
       <%= yield %>
       <%= render 'shared/footer' %>
-      <%= javascript_pack_tag 'map' %>
     </div>
   </body>
 </html>
