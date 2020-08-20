@@ -2,7 +2,12 @@ class ToolsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @tools = Tool.all
+    if params[:query].present?
+      sql = "tools.name ILIKE :query OR tools.description ILIKE :query"
+      @tools = Tool.where(sql, query: "%#{params[:query]}%")
+    else
+      @tools = Tool.all
+    end
   end
 
   def new
