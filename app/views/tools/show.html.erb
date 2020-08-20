@@ -8,7 +8,7 @@
   <div class="show-container">
     <div class="image">
       <% if @tool.photo.present? %>
-        <%= cl_image_tag tool.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @tool.photo.key, height: 300, width: 400, crop: :fill %>
       <% else %>
         <img height="300" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
       <% end %>
