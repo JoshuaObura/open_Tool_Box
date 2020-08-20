@@ -13,21 +13,23 @@
       <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
-  
-  <div class="card-container">
-    <% @tools.each do |tool| %>
-      <div class="card">
-        <%= link_to tool_path(tool) do %>
-          <h3> <%= tool.name.capitalize %></h3>
-          <% if tool.photo.present? %>
-            <%= cl_image_tag tool.photo.key, height: 300, width: 400, crop: :fill %>
-          <% else %>
-            <div class="size mb-4"> <img src="https://www.askideas.com/media/73/Hey-You-Finger-Picture.gif">
-          <% end %>
-        <% end %>
+
+<div class="card-container">
+  <% @tools.each do |tool| %>
+    <div class="card-trip">
+      <%= link_to tool_path(tool) do %>
+      <img height="350" width="500" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg" />
+      <% end %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= tool.name.capitalize %></h2>
+            <p>Short description here!</p>
+          </div>
+          <h2 class="card-trip-pricing">£1,000,000</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
       </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>
 
 <div id="map"
