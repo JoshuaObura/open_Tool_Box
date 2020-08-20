@@ -11,3 +11,22 @@
   margin: auto;
   max-width: 1000px;
 }
+
+.search-form {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+}
+
+.btn-primary {
+  position: absolute;
+  top: 80%;
+  left: 30%;
+ padding: 10px;
+ width: 150px;
+}
+
+.form-control {
+  text-align: center;
+}
