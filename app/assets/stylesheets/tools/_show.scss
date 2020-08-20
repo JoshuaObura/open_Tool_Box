@@ -2,3 +2,28 @@
 @import "/components/footer";
 @import "/components/navtext";
 @import "/components/form";
+
+h1 {
+  padding-bottom: 24px;
+  border-bottom: lightgrey 1px solid;
+}
+
+.show-item-container {
+  width: 60%;
+  h2 {
+    font-weight: bold;
+    margin: 24px 0;
+  }
+  .image img {
+    border-radius: 10px;
+  }
+  .info {
+    margin: 24px 0;
+    .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+    }
+  }
+}
