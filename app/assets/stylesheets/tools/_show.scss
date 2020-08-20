@@ -1,9 +1,3 @@
-@import "alert";
-@import "avatar";
-@import "navbar";
-@import "footer";
-
-.center{
-  display: flex;
-  justify-content: center;
-}
+@import "/components/navbar";
+@import "/components/footer";
+@import "/components/navtext";
