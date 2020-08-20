@@ -1,4 +1,4 @@
-<%= render 'shared/navbar' %>
+
 <div class="container tools-index">
   <h1>A Tool For Any Situation</h1>
 
@@ -20,19 +20,6 @@
           <img height="400" width="500" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
         <% end %>
       </div>
-    </form>
-  </div>
-    
-    <div class="card-container ">
-      <% @tools.each do |tool| %>
-        <div class="card">
-          <%= link_to tool_path(tool) do %>
-            <div class="size mb-4"> <img src="https://www.askideas.com/media/73/Hey-You-Finger-Picture.gif">
-              <span> <%= tool.name.capitalize %> </span>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
 </div>
