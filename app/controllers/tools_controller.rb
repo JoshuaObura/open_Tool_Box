@@ -4,7 +4,13 @@ class ToolsController < ApplicationController
   def index
     if params[:query].present?
       sql = "tools.name ILIKE :query OR tools.description ILIKE :query"
+      @tools = Tool.geocoded 
       @tools = Tool.where(sql, query: "%#{params[:query]}%")
+      @markers = @tools.map do |tool|
+      {
+        lat: tool.latitude,
+        lng: tool.longitude
+      }
     else
       @tools = Tool.all
     end
