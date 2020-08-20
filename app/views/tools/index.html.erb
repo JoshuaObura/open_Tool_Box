@@ -19,7 +19,7 @@
       <div class="card">
         <%= link_to tool_path(tool) do %>
           <h3> <%= tool.name.capitalize %></h3>
-          <img height="400" width="500" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
+          <%= cl_image_tag tool.photo.key, height: 300, width: 400, crop: :fill %>
         <% end %>
       </div>
     <% end %>
