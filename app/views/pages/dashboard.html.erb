@@ -27,7 +27,7 @@
       </div>
     <% end %>
   </div>
-<!---comment--->
+  <!---comment--->
   <div class="container-tools col-6">
     <h2>My Tools</h2>
     <h5><%=link_to "List a new tool", new_tool_path, class: "btn btn-primary" %></h5>
@@ -41,15 +41,15 @@
           <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
         <% end %>
 
-          <div class="card-product-infos ml-1">
-            <h2><%= tool.name %></h2>
-            <p><em><%= tool.description %></em></p>
-            <div class="links mt-3">
-              <p><%= link_to 'Edit', edit_tool_path(tool) %></p>
-              <p><%= link_to 'Delete', tool_path(tool), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            </div>
+        <div class="card-product-infos ml-1">
+          <h2><%= tool.name %></h2>
+          <p><em><%= tool.description %></em></p>
+          <div class="links mt-3">
+            <p><%= link_to 'Edit', edit_tool_path(tool) %></p>
+            <p><%= link_to 'Delete', tool_path(tool), method: :delete, data: { confirm: 'Are you sure?' } %></p>
           </div>
         </div>
+
       <% end %>
       <br>
     </div>
