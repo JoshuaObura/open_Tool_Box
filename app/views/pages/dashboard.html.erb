@@ -15,7 +15,7 @@
         <% if booking.tool.photo.attached? %>
           <%= cl_image_tag booking.tool.photo.key, height: 300, width: 400, crop: :fill %>
         <% else %>
-          <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
+          <img height="300" width="400" crop="fill" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
         <% end %>
         <div class="card-product-infos ml-1">
           <h2><%= booking.tool.name %></h2>
