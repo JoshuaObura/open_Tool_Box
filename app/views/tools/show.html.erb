@@ -1,5 +1,5 @@
 <%= render 'shared/homenavbar' %>
-
+<br>
   <h1>Tool Hire</h1>
 
   <div class="second-container">
@@ -70,5 +70,12 @@
         <%= f.button :submit, class: "btn btn-primary-booking" %>
       </div>
     <% end %>
+
+    <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+      <span><strong>Oops!</strong> 😱 a problem has occurred while processing your booking. </span>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
   </div>
   
