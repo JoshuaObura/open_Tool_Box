@@ -1,7 +1,6 @@
 <%= render 'shared/homenavbar' %>
 <br>
 <h1>Tool Hire</h1>
-
 <div class="second-container">
   <h2><%= @tool.name %></h2>
   <div class="tool-and-form">
@@ -16,6 +15,7 @@
         </div>
         <div class="info">
           <p><i class="fas fa-tools"></i> <%= @tool.description %></p>
+
             <div class="price">
               <h4>£29 per day</h4>
               <!--
@@ -51,6 +51,11 @@
           <%= f.button :submit, class: "btn btn-primary-booking" %>
         </div>
       <% end %>
+    <div class="flash flash-danger alert alert-dismissible fade show" role="alert">
+      <span><strong>Oops!</strong> 😱 a problem has occurred while processing your booking. </span>
+      <a data-dismiss="alert" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </a>
     </div>
   </div>
   <div id="map"
