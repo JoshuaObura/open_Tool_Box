@@ -10,12 +10,17 @@
 <div class="listings-and-bookings">
    <div class="container-tools">
     <h2>My Tools</h2>
+    <h5><%=link_to "List a new tool", new_tool_path, class: "btn btn-primary" %></h5>
+    <br>
+  <div class="card-product">
     <% current_user.tools.each do |tool| %>
-      <div class="card-product">
+      <% if tool.photo.attached? %>
+        <%= cl_image_tag tool.photo.key, height: 320, width: 400, crop: :fill %>
+      <% else %>
         <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
+      <% end %>
         <div class="card-product-infos ml-1">
           <h2><%= tool.name %></h2>
-
           <p><em><%= tool.description %></em></p>
           <div class="links mt-3">
             <p><%= link_to 'Edit', edit_tool_path(tool) %></p>
@@ -24,8 +29,6 @@
         </div>
       </div>
     <% end %>
-    <h5><%=link_to "List a new tool", new_tool_path, class: "btn btn-primary" %></h5>
-    <br>
     <br>
   </div>
 
