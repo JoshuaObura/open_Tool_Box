@@ -1,22 +1,17 @@
 @import "/components/card";
-
 .btn-primary {
   color: #fff;
   background-color: #E6B831;
   border-color: #E6B831;
   border-radius: 5px;
   z-index: 1;
-
-
 }
-
 .btn-primary:hover {
   color: #fff;
   background-color: black;
   border-color: black;
   box-shadow: 2px 2px 4px #E6B831;
 }
-
 .toolbox {
   position: absolute;
   top: 30%;
@@ -24,7 +19,6 @@
   height: auto;
   padding: 6rem 0;
 }
-
 .toolbox h1 {
   width: 90%;
   font-size: 2.5rem;
@@ -36,7 +30,6 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-
 }
 .toolbox h2 {
   max-width: 20rem;
@@ -44,19 +37,15 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 .grad-bg {
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
 }
-
 .carousel_container {
   height: 100vh;
   width: 100vw;
   position: absolute;
   z-index: -1;
 }
-
-
