@@ -4,6 +4,6 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
-  <button type="button" class="btn btn-dark"><%= f.submit %></button>
+  <%= f.submit class: "btn-primary" %>
 <% end %>
-  <p><%= link_to ('<i class="fas fa-home"></i>').html_safe, tools_path%><p>
+  <p><%= link_to ('<i class="fas fa-home"></i>').html_safe, tools_path %><p>
