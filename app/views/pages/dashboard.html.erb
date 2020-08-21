@@ -36,7 +36,7 @@
           <h2><%= booking.tool.name %></h2>
           <p><%= booking.start_date %></p>
           <p><%= booking.end_date %></p>
-          <p><%= link_to 'Delete this booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <p><%= link_to 'Cancel this booking', booking_path(booking), method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
       </div>
     <% end %>

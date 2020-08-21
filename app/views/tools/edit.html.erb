@@ -1,9 +1,12 @@
 <%= render 'shared/homenavbar' %>
-<h1>Edit Tool Info</h1>
-<%= simple_form_for(@tool) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit class: "btn-primary" %>
-<% end %>
-  <p><%= link_to ('<i class="fas fa-home"></i>').html_safe, tools_path %><p>
+<br>
+<div class="form">
+  <h1>Edit Tool Info</h1>
+  <%= simple_form_for(@tool) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit class: "btn-primary" %>
+  <% end %>
+  <p><%= link_to ('<i class="fas fa-home" style="color: #E6B831"></i>').html_safe, tools_path %><p>
+</div>
