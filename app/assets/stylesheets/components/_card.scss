@@ -62,11 +62,6 @@ h1 {
   object-fit: cover;
 }
 
-.card-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .card-tool{
   background-color: white;
   overflow: hidden;
@@ -96,7 +91,7 @@ h1 {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 16px;
+  margin: 0 10px 16px 16px;
 }
 
 .card-trip > img {
