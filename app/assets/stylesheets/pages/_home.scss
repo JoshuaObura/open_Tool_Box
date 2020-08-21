@@ -11,7 +11,6 @@
 }
 
 .btn-primary:hover {
-  bottom: 500px;
   color: #fff;
   background-color: black;
   border-color: black;
@@ -19,10 +18,13 @@
 }
 
 .toolbox {
+  position: absolute;
+  top: 30%;
   width: 100%;
   height: auto;
   padding: 6rem 0;
 }
+
 .toolbox h1 {
   width: 90%;
   font-size: 2.5rem;
@@ -44,20 +46,16 @@
 }
 
 .grad-bg {
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%);
 }
 
-.container {
-  min-height: 100vh;
-  margin: 0;
-  padding: 0px;
-  max-width: 100%;
-  position: relative;
-}
-
 .carousel_container {
-  position: relative;
-  bottom: 345px;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
   z-index: -1;
 }
+
