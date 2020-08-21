@@ -5,9 +5,13 @@
   background-color: #E6B831;
   border-color: #E6B831;
   border-radius: 5px;
+  z-index: 1;
+
+
 }
 
 .btn-primary:hover {
+  bottom: 500px;
   color: #fff;
   background-color: black;
   border-color: black;
@@ -25,10 +29,12 @@
   font-weight: bold;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
+  z-index: 2;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+
 }
 .toolbox h2 {
   max-width: 20rem;
@@ -48,4 +54,10 @@
   padding: 0px;
   max-width: 100%;
   position: relative;
+}
+
+.carousel_container {
+  position: relative;
+  bottom: 345px;
+  z-index: -1;
 }

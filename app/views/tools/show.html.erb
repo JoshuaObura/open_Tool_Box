@@ -16,15 +16,28 @@
         </div>
         <div class="info">
           <p><i class="fas fa-tools"></i> <%= @tool.description %></p>
-
-          <div class="price">
-            <h4>£29 per day</h4>
-            <!--
-            <button type="button" class="btn btn-primary-booking"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
-            -->
+            <div class="price">
+              <h4>£29 per day</h4>
+              <!--
+              <button type="button" class="btn btn-primary-booking"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
+              -->
+            </div>
           </div>
         </div>
-      </div>  
+        <div class="booking-form">
+          <h3>Create a new booking</h3>
+
+          <%= simple_form_for [@tool, @booking] do |f| %>
+            <div class="form-inputs">
+              <%= f.input :start_date, as: :date, html5: true  %>
+              <%= f.input :end_date, as: :date, html5: true  %>
+            </div>
+
+            <div class="form-actions btn">
+              <%= f.button :submit, class: "btn btn-primary-booking" %>
+            </div>
+        <% end %>
+      </div>
     </div>
     <div class="booking-form col-6">
       <h3>Create a new booking</h3>
@@ -46,9 +59,6 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
-
-
   <div class="links">
     <%= link_to ('<i class="fas fa-arrow-circle-left"></i> Go back').html_safe, tools_path, class: "btn btn-outline" %>
   </div>
