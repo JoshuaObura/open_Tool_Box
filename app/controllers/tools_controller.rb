@@ -37,13 +37,7 @@ class ToolsController < ApplicationController
   end
 
   def edit
-    tool = Tool.find(params[:id])
-
-    if current_user.id == tool.user_id
-      @tool = tool
-    else
-      redirect_to tools_path(current_user)
-    end
+    @tool = Tool.find(params[:id])
   end
 
   def destroy
@@ -53,11 +47,10 @@ class ToolsController < ApplicationController
   end
 
   def update
-    @tool = Tool.find
-    @user = User.find(params[:user_id])
+    @tool = Tool.find(params[:id])
 
     if @tool.update(tool_params)
-      redirect_to tools_user_path(@user)
+      redirect_to dashboard_path
     else
       render :edit
     end
