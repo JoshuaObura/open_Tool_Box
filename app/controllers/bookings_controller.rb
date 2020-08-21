@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
     if @booking.start_date >= @now && @booking.start_date <= @booking.end_date && @booking.save
       redirect_to dashboard_path
     else
+      flash.now[:alert] = "A problem has occurred while processing your booking."
       render :new
     end
   end

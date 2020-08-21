@@ -1,19 +1,21 @@
 <%= render 'shared/navbar' %>
-
+<br><br>
 <div class="tools-container">
 
   <h1>A Tool For Any Situation</h1>
-
+  <br>
   <div class="search-form">
     <%= form_tag tools_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find a tool"
+        placeholder: "Please enter a tool to search...."
       %>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <br>
+      <%= submit_tag "Search", class: "btn btn-primary-index" %>
     <% end %>
   </div>
+  <br><br><br>
   <div class="card-container">
     <% @tools.each do |tool| %>
       <div class="card-trip">

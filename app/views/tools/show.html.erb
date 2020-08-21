@@ -1,27 +1,37 @@
 <%= render 'shared/navbar' %>
 
-<div class="tools-container">
+<div class="container">
   <h1>Tool Hire</h1>
 
-  <div class="show-item-container">
+  <div class="second-container">
     <h2><%= @tool.name %></h2>
-    <div class="image">
-      <% if @tool.photo.attached? %>
-        <%= cl_image_tag @tool.photo.key, height: 320, width: 400, crop: :fill %>
-      <% else %>
-        <img height="320" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
-      <% end %>
-    </div>
+    <div class="show-item-container">  
+      <div class="tool-show-card">
+        <div class="image">
+          <% if @tool.photo.attached? %>
+            <%= cl_image_tag @tool.photo.key, height: 320, width: 400, crop: :fill %>
+          <% else %>
+            <img height="320" width="400" src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg">
+          <% end %>
+        </div>
+        <div class="info">
+          <p><i class="fas fa-tools"></i> <%= @tool.description %></p>
 
-    <div class="info">
-      <p><i class="fas fa-tools"></i> <%= @tool.description %></p>
-      
-      <div class="price">
-        <h4>£29 per day</h4>
-        <button type="button" class="btn btn-primary"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
-      </div>
+          <div class="price">
+            <h4>£29 per day</h4>
+            <!--
+            <button type="button" class="btn btn-primary-booking"><%= link_to "Make a booking", new_tool_booking_path(@tool) %> </button>
+            -->
+          </div>
+        </div>
+      </div>  
     </div>
-
+    
+    <div id="map"
+        style="width: 100%; height: 320px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 
     <!--
     <div class="card-tool-icons">
@@ -37,9 +47,6 @@
       </div>
       -->
 
-    </div>
-
-
     <div class="links">
       <%= link_to ('<i class="fas fa-arrow-circle-left"></i> Go back').html_safe, tools_path, class: "btn btn-outline" %>
       <!--
@@ -50,11 +57,20 @@
       </p>
       -->
     </div>
-  </div>
-
-  <div class="booking-form">
-
   
+  <div class="booking-form">
+    <h3>Create a new booking</h3>
+
+    <%= simple_form_for [@tool, @booking] do |f| %>
+      <div class="form-inputs">
+        <%= f.input :start_date, as: :date, html5: true  %>
+        <%= f.input :end_date, as: :date, html5: true  %>
+      </div>
+
+      <div class="form-actions btn">
+        <%= f.button :submit, class: "btn btn-primary-booking" %>
+      </div>
+    <% end %>
   </div>
 
 </div>

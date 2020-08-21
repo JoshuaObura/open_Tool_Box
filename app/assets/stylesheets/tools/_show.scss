@@ -8,8 +8,19 @@ h1 {
   border-bottom: lightgrey 1px solid;
 }
 
+.second-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .show-item-container {
-  width: 60%;
+  width: 100%;
+  margin-bottom: 60px;
+
+  display: flex;
+  }
+
+.tool-show-card{
   h2 {
     font-weight: bold;
     margin: 24px 0;
@@ -21,9 +32,48 @@ h1 {
     margin: 24px 0;
     .price {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         position: relative;
     }
   }
+}
+
+.btn-primary-booking {
+  padding: 5px;
+  width: 150px;
+  background-color: #E6B831;
+  border-color: #E6B831;
+  border-radius: 5px;
+  color: white;
+  &:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    box-shadow: 2px 2px 4px #E6B831;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.booking-form {
+  width: 360px;
+  background: white;
+  padding: 24px;
+  margin: 24px;
+  border-radius: 24px;
+  h3 {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+
+#map {
+  margin-left: 20px;
 }
