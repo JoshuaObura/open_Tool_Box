@@ -1,7 +1,10 @@
 .nav-link {
-  color: yellow;
+  color: yellow !important;
+  text-shadow: 2px 2px black;
+
 }
 
 .nav-link :hover {
-  color: yellow;
+  color: yellow !important;
+  text-shadow: 2px 2px black;
 }
