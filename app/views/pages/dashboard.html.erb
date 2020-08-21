@@ -33,8 +33,8 @@
     <h2>My Bookings</h2>
     <% current_user.bookings.each do |booking| %>
       <div class="card-product">
-        <% if tool.photo.attached? %>
-          <%= cl_image_tag tool.photo.key, height: 300, width: 400, crop: :fill %>
+        <% if booking.tool.photo.attached? %>
+          <%= cl_image_tag booking.tool.photo.key, height: 300, width: 400, crop: :fill %>
         <% else %>
           <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
         <% end %>
