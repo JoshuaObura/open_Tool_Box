@@ -13,12 +13,13 @@
     <% current_user.tools.each do |tool| %>
       <div class="card-product">
         <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1581705325-41z1obml8il-ac-1581705279.jpg"/>
-        <div class="card-product-infos">
+        <div class="card-product-infos ml-1">
           <h2><%= tool.name %></h2>
-          <p><%= tool.description %></p>
-          <p><%= link_to 'Show', tool %></p>
-          <p><%= link_to 'Edit', edit_tool_path(tool) %></p>
-          <p><%= link_to 'Destroy', tool, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <p><em><%= tool.description %></em></p>
+          <div class="links mt-3">
+            <p><%= link_to 'Edit', edit_tool_path(tool) %></p>
+            <p><%= link_to 'Delete', tool, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          </div>
         </div>
       </div>
     <% end %>
@@ -43,4 +44,12 @@
       </div>
     <% end %>
   </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>

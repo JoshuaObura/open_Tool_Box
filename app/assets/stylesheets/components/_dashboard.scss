@@ -1,9 +1,10 @@
 .listings-and-bookings {
     display: flex;
+    margin-top: 20px;
 }
 
 .container-tools {
-
+  max-width: 50%;
 }
 
 .my-dashboard {
@@ -47,7 +48,11 @@
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
+  margin: 5px 0 10px 0;
+}
+
+.card-product links {
+  display: inline;
 }
 
 .card-product p {
@@ -56,8 +61,10 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  display: inline;
 }
 
 .card-product .card-product-infos {
   padding: 16px 16px 16px 8px;
+
   }
